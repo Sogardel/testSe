@@ -1,0 +1,25 @@
+21:37:37.961 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21:37:37.964 [main] INFO  exampleUtils.Log - ++++++++++++++ Start of test case: testSetUp
+21:37:37.964 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21:37:40.536 [main] INFO  exampleUtils.Log - Trying to lucnch the url :http://www.antena3.ro
+21:38:03.477 [main] INFO  exampleUtils.Log - URLhttp://www.antena3.roopened!
+21:38:03.477 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21:38:03.478 [main] INFO  exampleUtils.Log - +++++++++  End of test case: Test testSetUphas been passed with status 1
+21:38:03.478 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21:38:03.481 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21:38:03.481 [main] INFO  exampleUtils.Log - ++++++++++++++ Start of test case: Secodtest
+21:38:03.483 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21:38:03.959 [main] INFO  exampleUtils.Log - Screenshot : Secodtest_201710162138.pngsaved to screenshots folder
+21:38:03.959 [main] ERROR exampleUtils.Log - Test has failed with following details : java.lang.AssertionError: expected [true] but found [false]
+21:38:03.962 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21:38:03.962 [main] INFO  exampleUtils.Log - ++++++++++++++ Start of test case: thirdTest
+21:38:03.962 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21:38:03.969 [main] INFO  exampleUtils.Log - environement este :http://www.antena3.ro
+21:38:03.969 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21:38:03.969 [main] INFO  exampleUtils.Log - +++++++++  End of test case: Test thirdTesthas been passed with status 1
+21:38:03.969 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21:38:03.973 [main] INFO  exampleUtils.Log - Call the quit browser on the @AfterClass
+21:38:04.759 [main] INFO  exampleUtils.Log - Browser was closed!
+21:38:04.760 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+21:38:04.760 [main] INFO  exampleUtils.Log - +++++++++  End of test case: tearDown
+21:38:04.761 [main] INFO  exampleUtils.Log - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

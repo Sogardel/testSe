@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="exampleSelenium" duration-ms="9261" started-at="2017-10-18T20:52:00Z" finished-at="2017-10-18T20:52:10Z">
+    <groups>
+    </groups>
+    <test name="chromeTest" duration-ms="7691" started-at="2017-10-18T20:52:00Z" finished-at="2017-10-18T20:52:08Z">
+      <class name="exampleTestCases.crossBrowserTest">
+        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:exampleTestCases.crossBrowserTest@4501b7af]" name="selectBrowser" duration-ms="7670" started-at="2017-10-18T23:52:00Z" finished-at="2017-10-18T23:52:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectBrowser -->
+      </class> <!-- exampleTestCases.crossBrowserTest -->
+    </test> <!-- chromeTest -->
+    <test name="FirefoxTest" duration-ms="9261" started-at="2017-10-18T20:52:00Z" finished-at="2017-10-18T20:52:10Z">
+      <class name="exampleTestCases.crossBrowserTest">
+        <test-method status="PASS" signature="selectBrowser(java.lang.String)[pri:0, instance:exampleTestCases.crossBrowserTest@2a5ca609]" name="selectBrowser" duration-ms="9245" started-at="2017-10-18T23:52:00Z" finished-at="2017-10-18T23:52:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectBrowser -->
+      </class> <!-- exampleTestCases.crossBrowserTest -->
+    </test> <!-- FirefoxTest -->
+  </suite> <!-- exampleSelenium -->
+</testng-results>
