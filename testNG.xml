@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="exampleSelenium" parallel="tests" >
+  <test name="FirefoxTest" >
+  <parameter name ="browser" value = "firefox"/>
+    <classes>
+       <class name="exampleTestCases.crossBrowserTest" />
+    </classes>
+  </test>
+    <test name="chromeTest" >
+  <parameter name ="browser" value = "chrome"/>
+    <classes>
+       <class name="exampleTestCases.crossBrowserTest" />
+    </classes>
+  </test>
+</suite>
