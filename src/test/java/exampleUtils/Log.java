@@ -6,6 +6,8 @@ package exampleUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import exampleProperties.PropertiesLoad;
+
 /**
  * @author dragos_tanta
  * @category this is a log class defined for log4j2 
@@ -47,5 +49,12 @@ public class Log {
 	 */	
 	public static void error(String message) {
 		Log.error(message);
+	}
+	public static void getBrowser () {
+    	String browserR = PropertiesLoad.browser.getProperty("browser");
+ 		Log.info("Started test suite with browser : " + browserR);
+
+    	 
+
 	}
 }

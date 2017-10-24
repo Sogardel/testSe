@@ -35,12 +35,12 @@ import exampleUtils.Log;
     		Log.error("No browser is defined in browser.properties. Please set a browser");
     	}
 		if(browsername.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "seleniumDrivers//geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"//seleniumDrivers//geckodriver.exe");
     		driver = new FirefoxDriver();   
 
        }
     	else if(browsername.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "seleniumDrivers//chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+ "//seleniumDrivers//chromedriver.exe");
     		driver = new ChromeDriver();   
     	}
     	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

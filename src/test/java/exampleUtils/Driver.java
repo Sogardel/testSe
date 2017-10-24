@@ -8,18 +8,16 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Parameters;
 
 import exampleProperties.PropertiesLoad;
 /**
  * @author dragos
  *
  */
-public class Driver {
+public abstract class Driver {
 
 		public static  WebDriver driver;
     	static String browser = PropertiesLoad.browser.getProperty("browser");
-    	static String browser2 = PropertiesLoad.browser.getProperty("browser2");
 
     	
 	    public static WebDriver  selectBrowser() {

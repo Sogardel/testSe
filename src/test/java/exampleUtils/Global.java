@@ -6,30 +6,25 @@ package exampleUtils;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.TestException;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.BeforeClass;
 
 /**
  * @author dragos
  *
  */
-public  class Global {
+public  class Global extends Driver{
 
-	//public static WebDriver driver;
-
-	public static WebDriver driver = Driver.selectBrowser();  
+	//public static WebDriver driver = Driver.selectBrowser();  
 
 
-	//static WebDriver driver;
+	
+//	public static WebDriver driver;
 
 	public Select select;
 	
@@ -77,11 +72,5 @@ public  class Global {
 			    	Log.endTestCaseFormat("tearDown");
 			    	
     }
-	
-/*	public void clickElement(By selector) {
-		WebElement element = driver.findElement(selector);
-	//	actions = new Actions(driver);
-	}
-	*/
 
 }

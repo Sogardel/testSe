@@ -2,6 +2,8 @@ package exampleTestCases;
 import exampleProperties.PropertiesLoad;
 import org.testng.annotations.Test;
 
+import examplePages.HomePage;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.channels.SelectableChannel;
@@ -13,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 
 import exampleUtils.Driver;
@@ -32,7 +35,14 @@ public class ExempluTest {
   //  String appURL = "http://www.antena3.ro";
 		String appURL = PropertiesLoad.environement.getProperty("DEV");
 
-   
+	    @BeforeClass
+	   	    public void setUp(){
+	    	WebDriver driver = Driver.selectBrowser();
+	    	
+	    	    }
+		
+		
+		
     @Test
     public void testSetUp() {
     //	Log.startTestCaseFormat("testSetUp");
@@ -73,8 +83,12 @@ public class ExempluTest {
 
     	System.out.println("Username este :" + username);
         Log.info("environement este :" + env);
-
     	
+    }
+    @Test(dependsOnMethods={"thirdTest"},alwaysRun = true)
+    public void fourTest() {
+    	HomePage homePage = new HomePage();
+    	homePage.ReadTitle();
     }
 
 
