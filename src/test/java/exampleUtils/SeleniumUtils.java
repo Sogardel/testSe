@@ -1,30 +1,22 @@
-/**
- * 
- */
+
 package exampleUtils;
 
 import static org.testng.Assert.assertEquals;
 
-import org.openqa.selenium.WebDriver;
-import org.testng.TestException;
-import org.testng.annotations.BeforeClass;
+import java.util.List;
 
-/**
- * @author dragos
- *
- */
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.TestException;
+
+
 public abstract class SeleniumUtils extends Driver {
 	
 	public static int timeout =10;
-	
 
-//	public SeleniumUtils() {
-	//	driver = Driver.selectBrowser();
-//	}
-
-	//public static WebDriver driver;
-	
-	
 				public void navigateBack() {
 							try {
 									driver.navigate().back();
@@ -59,22 +51,50 @@ public abstract class SeleniumUtils extends Driver {
 								throw new TestException("nable to perform browser refresh !");
 							}
 				}
-				public  String getPageTitle() {
+				public  String getPageTitle( String expectTitle ) {
 							try {
 								String actualTitle=driver.getTitle();
 								Log.info("called function <getPageTitle> and current page title is: "+ driver.getTitle().toString());
-								String expectedTitle = "Antena2 - Speciali?ti în ?tiri";
+								String expectedTitle = expectTitle;
 								assertEquals(actualTitle, expectedTitle);
+								return driver.getTitle();
+
 							}
 							catch(Exception e) {
 								Log.error("Error in function <getPageTitle>");
 								Log.error("Error : " + e);
 					            throw new TestException(String.format("Current page title is: %s", driver.getTitle()));
-
 							}
-							return driver.getTitle();
 				}
+				
+				public WebElement getElement(By selector) {
+					        try {
+								Log.info("called function <getElement> on selector: "+ selector);
+					            return driver.findElement(selector);
+					        } catch (Exception e) {
+					            System.out.println(String.format("Element " + selector +" does not exist"));
+					        }
+					        return null;
+			    }
+			   public List <WebElement> getElements(By Selector) {
+					        waitForElementToBeVisible(Selector);
+					        try {
+					            return driver.findElements(Selector);
+					        } catch (Exception e) {
+					            throw new NoSuchElementException(String.format("The following element did not display: [%s] ", Selector.toString()));
+					        }
+					    }
+
+				public void waitForElementToBeVisible(By selector) {
+							try {
+								WebDriverWait wait = new WebDriverWait(driver, timeout);
+								wait.until(ExpectedConditions.presenceOfElementLocated(selector));
+							}
+							catch(Exception e) {
+							  throw new NoSuchElementException(String.format("The element was not visible: " + selector));
+							}				
 							
+				}			
 
 		}
 
