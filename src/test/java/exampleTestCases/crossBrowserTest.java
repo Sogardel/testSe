@@ -43,7 +43,7 @@ import exampleUtils.Log;
     		Log.error("No browser is defined in browser.properties. Please set a browser");
     	}
 		if(browsername.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "seleniumDrivers//geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", "seleniumDrivers//geckodriver");
     	//	driver = new FirefoxDriver();   
             DesiredCapabilities cap =  DesiredCapabilities.firefox();
             cap.setPlatform(Platform.LINUX);
@@ -53,7 +53,7 @@ import exampleUtils.Log;
             driver.quit();
        }
     	else if(browsername.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "seleniumDrivers//chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "seleniumDrivers//chromedriver");
             DesiredCapabilities cap =  DesiredCapabilities.chrome();
             cap.setPlatform(Platform.LINUX);
             URL url = new URL("http://10.23.12.104:4444/wd/hub");
