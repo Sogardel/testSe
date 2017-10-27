@@ -34,8 +34,9 @@ import exampleUtils.Log;
 	String appURL = PropertiesLoad.environement.getProperty("PP");
 
 	
-	@Test 
+
 	@Parameters("browser")
+	@Test 
     public void  selectBrowser(String browsername) throws MalformedURLException {
     	
     	if ( browsername == null) {
