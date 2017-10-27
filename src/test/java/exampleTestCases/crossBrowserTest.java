@@ -44,6 +44,7 @@ import exampleUtils.Log;
     		Log.error("No browser is defined in browser.properties. Please set a browser");
     	}
 		if(browsername.equalsIgnoreCase("firefox")) {
+			Log.startTestCaseFormat("crossbrowserTest");
             System.setProperty("webdriver.gecko.driver", "seleniumDrivers//geckodriver");
     	//	driver = new FirefoxDriver();   
             DesiredCapabilities cap =  DesiredCapabilities.firefox();
